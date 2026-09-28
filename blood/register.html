@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d72638" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Blood Donor Finder" />
+    <title>Register Donor | Blood Donor Finder</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="register">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">❤</span>
+          <span>Blood Donor Finder</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="register.html">Register</a>
+          <a href="search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="form-panel">
+        <div class="container narrow-container">
+          <div class="panel-box">
+            <div class="panel-header text-left">
+              <p class="eyebrow accent">Become a donor</p>
+              <h1 id="formTitle">Register donor profile</h1>
+            </div>
+
+            <form id="donorForm" class="donor-form">
+              <input type="hidden" id="donorId" name="donorId" />
+
+              <div class="field-row two-col">
+                <div class="form-group">
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" placeholder="Enter donor name" required />
+                </div>
+                <div class="form-group">
+                  <label for="bloodGroup">Blood group</label>
+                  <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="">Select blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-row two-col">
+                <div class="form-group">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" required />
+                </div>
+                <div class="form-group">
+                  <label for="location">City / location</label>
+                  <input id="location" name="location" type="text" placeholder="Enter city or area" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability" name="availability" required>
+                  <option value="">Select availability</option>
+                  <option value="Available now">Available now</option>
+                  <option value="Available today">Available today</option>
+                  <option value="Emergency only">Emergency only</option>
+                  <option value="Unavailable">Unavailable</option>
+                </select>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="submitBtn">Save donor</button>
+                <button type="button" class="btn btn-secondary hidden" id="cancelEditBtn">Cancel edit</button>
+              </div>
+            </form>
+
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

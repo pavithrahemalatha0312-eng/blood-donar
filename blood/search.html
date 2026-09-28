@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d72638" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Blood Donor Finder" />
+    <title>Search Donors | Blood Donor Finder</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="search">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">❤</span>
+          <span>Blood Donor Finder</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="register.html">Register</a>
+          <a href="search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="search-panel">
+        <div class="container">
+          <div class="panel-box search-box">
+            <div class="panel-header text-left">
+              <p class="eyebrow accent">Find a match</p>
+              <h1>Search blood donors</h1>
+            </div>
+
+            <form id="searchForm" class="search-form">
+              <div class="field-row search-row">
+                <div class="form-group">
+                  <label for="searchBloodGroup">Blood group</label>
+                  <select id="searchBloodGroup" name="bloodGroup">
+                    <option value="">Any group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="searchLocation">City / location</label>
+                  <input id="searchLocation" name="location" type="text" placeholder="Search city or area" />
+                </div>
+
+                <div class="form-group action-group">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                  <button type="button" class="btn btn-secondary" id="resetSearchBtn">Reset</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div class="container">
+          <div class="results-toolbar">
+            <h2>Matching donors</h2>
+            <span id="resultsCount" class="results-count">0 donors</span>
+          </div>
+          <div id="searchResults" class="results-grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

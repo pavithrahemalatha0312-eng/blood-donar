@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Blood Donor Finder icon">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff758c"/>
+      <stop offset="100%" stop-color="#d72638"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="#fef4f6"/>
+  <circle cx="96" cy="96" r="76" fill="url(#g1)" opacity="0.15"/>
+  <path d="M96 146c-42-23-66-46-66-79 0-20 15-35 34-35 14 0 25 7 32 20 7-13 18-20 32-20 19 0 34 15 34 35 0 33-24 56-66 79z" fill="url(#g1)"/>
+  <path d="M61 43h20v18h18v20H81v18H61v-18H43V61h18V43z" fill="#ffffff" opacity="0.95"/>
+</svg>

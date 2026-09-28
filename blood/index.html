@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d72638" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Blood Donor Finder" />
+    <title>Blood Donor Finder</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">❤</span>
+          <span>Blood Donor Finder</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="register.html">Register</a>
+          <a href="search.html">Search</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Life-saving community</p>
+            <h1>Find a donor instantly and save a life.</h1>
+            <p class="hero-text">
+              Connect with verified blood donors across your city and respond faster in emergencies.
+            </p>
+            <div class="hero-actions">
+              <a href="register.html" class="btn btn-primary">Register as donor</a>
+              <a href="search.html" class="btn btn-secondary">Search donors</a>
+            </div>
+            <ul class="quick-points">
+              <li>Fast emergency matching</li>
+              <li>City-wise donor search</li>
+              <li>Easy donor management</li>
+            </ul>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-card">
+              <div class="panel-header">
+                <span class="status-dot"></span>
+                <span>Live donor stats</span>
+              </div>
+              <div class="stats-grid">
+                <div>
+                  <strong id="stats-total">0</strong>
+                  <span>Total donors</span>
+                </div>
+                <div>
+                  <strong id="stats-available">0</strong>
+                  <span>Available now</span>
+                </div>
+                <div>
+                  <strong id="stats-city">0</strong>
+                  <span>Cities covered</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow accent">How it works</p>
+            <h2>Simple steps to save lives</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="icon">1</div>
+              <h3>Register</h3>
+              <p>Add your blood group, contact details, city, and availability.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">2</div>
+              <h3>Search</h3>
+              <p>Look up donors by blood type and location in seconds.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">3</div>
+              <h3>Connect</h3>
+              <p>Reach out immediately to the suitable donor and help in time.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="featured-section">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow accent">Donor spotlight</p>
+              <h2>Members ready to help</h2>
+            </div>
+            <a href="search.html" class="text-link">View all donors</a>
+          </div>
+          <div id="featuredDonors" class="results-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Blood Donor Finder</p>
+        <p>Made for community support and emergency response.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

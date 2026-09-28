@@ -1,0 +1,10 @@
+{
+  "name": "blood-donor-finder",
+  "version": "1.0.0",
+  "description": "Real blood donor finder app with backend call support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
